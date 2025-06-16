@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv');
+dotenv.config();
 
-
-const extraVar = 'Esta variable ya no se usa, pero alguien olvidó borrarla!'
-const API_KEY = 'ghp_a1b2c3d4e5f6g7h8i9j0klmnopqrstuvwx12';
+const API_KEY = process.env.PORT;
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -17,7 +17,7 @@ app.get('/secure-data', (req, res) => {
   if (key !== API_KEY) {
     return res.status(403).json({ error: 'Acceso denegado' });
   }
-  res.json({ secret: '12345' });
+  res.json({secret: '123456'});
 });
 
 module.exports = app;
