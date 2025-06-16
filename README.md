@@ -2,7 +2,7 @@
 <h1> Insecure Node app </h1>
 </div>
 
-#Estado del pipeline
+# Estado del pipeline
 [![Node.js CI](https://github.com/francisco-perez-0/insecure-node-app/actions/workflows/build.yml/badge.svg)](https://github.com/francisco-perez-0/insecure-node-app/actions/workflows/build.yml)
 
 Este proyecto contiene una aplicación backend hecha en Node.js con Express,
